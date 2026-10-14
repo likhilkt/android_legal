@@ -1,152 +1,330 @@
-# Privacy Policy — PDF ToolBox
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy Policy – PDF Toolbox</title>
+<meta name="description" content="Privacy Policy for PDF Toolbox by RabbitFoot. Your documents are processed on your device and never uploaded.">
+<style>
+  :root {
+    --bg: #fbfbfe;
+    --surface: #ffffff;
+    --text: #1c1d2b;
+    --muted: #5b5d72;
+    --accent: #4f5bd5;
+    --accent-soft: #eef0fd;
+    --rule: #e3e4f2;
+    --focus: #4f5bd5;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12131a;
+      --surface: #1a1b25;
+      --text: #e6e7f2;
+      --muted: #a3a6c2;
+      --accent: #a9b0ff;
+      --accent-soft: #23264a;
+      --rule: #2c2e3d;
+      --focus: #a9b0ff;
+      color-scheme: dark;
+    }
+  }
 
-**Effective date:** 14 October 2026
-**Developer:** RabbitFoot
-**App:** PDF ToolBox (package `pdf.tools.ai.rabbitfoot`)
-**Contact:** likhil004play@gmail.com
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: 1.5rem; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    /* System fonts only: this page loads nothing from third parties. */
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0) env(safe-area-inset-bottom, 0) env(safe-area-inset-left, 0);
+  }
+  a { color: var(--accent); text-underline-offset: 0.18em; }
+  a:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 3px; }
 
-This Privacy Policy explains how PDF ToolBox ("the app", "we", "us") handles information when you use it. We built the app so that **your documents stay on your device**.
+  .page {
+    max-width: 68rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 4rem;
+    display: grid;
+    gap: 2.5rem;
+  }
+  @media (min-width: 64rem) {
+    .page { grid-template-columns: 15rem minmax(0, 1fr); align-items: start; }
+  }
 
----
+  header.title { grid-column: 1 / -1; max-width: 44rem; }
+  .app {
+    display: flex; align-items: center; gap: 0.75rem;
+    color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem;
+  }
+  .app svg { flex: none; }
+  h1 {
+    font-size: clamp(2rem, 1.4rem + 2.6vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.75rem;
+  }
+  .meta { color: var(--muted); margin: 0; font-size: 0.95rem; }
 
-## 1. Summary
+  /* The one bold element: the core promise. */
+  .promise {
+    grid-column: 1 / -1;
+    max-width: 44rem;
+    background: var(--accent-soft);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 12px 12px 0;
+    padding: 1.25rem 1.5rem;
+  }
+  .promise p.lead {
+    font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.5rem);
+    line-height: 1.35;
+    font-weight: 650;
+    margin: 0 0 0.75rem;
+  }
+  .promise ul { margin: 0; padding-left: 1.2rem; }
+  .promise li { margin: 0.25rem 0; }
 
-- **Your files are processed on your device.** PDFs, images, scans, signatures and form data are never uploaded to our servers. We do not operate any servers that receive your files.
-- **We do not require an account** and we do not collect your name, email or phone number.
-- **The app shows ads** through Google AdMob. Ads use limited device information, as described in section 5.
-- **Some features use Google Play services** (document scanner and text recognition). These run on your device, but Google may download models and collect limited technical data, as described in section 4.
-- **Sensitive data you choose to store** (Vault files and your Auto-fill profile) is encrypted on your device.
+  nav.toc { font-size: 0.95rem; }
+  nav.toc h2 { font-size: 0.95rem; color: var(--muted); font-weight: 600; margin: 0 0 0.5rem; }
+  nav.toc ol { list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--rule); }
+  nav.toc li a {
+    display: block; padding: 0.3rem 0 0.3rem 0.9rem; margin-left: -1px;
+    color: var(--muted); text-decoration: none; border-left: 2px solid transparent;
+  }
+  nav.toc li a:hover { color: var(--text); border-left-color: var(--accent); }
+  @media (min-width: 64rem) { nav.toc { position: sticky; top: 1.5rem; } }
+  @media (max-width: 63.99rem) {
+    nav.toc details { border: 1px solid var(--rule); border-radius: 10px; padding: 0.75rem 1rem; background: var(--surface); }
+    nav.toc summary { cursor: pointer; font-weight: 600; }
+    nav.toc summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
+    nav.toc details ol { margin-top: 0.75rem; }
+  }
+  @media (min-width: 64rem) {
+    nav.toc details > summary { display: none; }
+  }
 
----
+  main { max-width: 44rem; min-width: 0; }
+  section { padding-top: 0.5rem; margin-bottom: 2.75rem; }
+  h2 {
+    font-size: 1.4rem; line-height: 1.25; letter-spacing: -0.01em;
+    margin: 0 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--rule);
+  }
+  h2 .n { color: var(--accent); font-variant-numeric: tabular-nums; margin-right: 0.5rem; }
+  h3 { font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+  p, ul { margin: 0 0 1rem; }
+  li { margin: 0.35rem 0; }
+  strong { font-weight: 650; }
+  code { font-size: 0.9em; background: var(--accent-soft); padding: 0.1em 0.35em; border-radius: 4px; }
 
-## 2. Information processed on your device
+  .table-wrap { overflow-x: auto; margin: 0 0 1.25rem; border: 1px solid var(--rule); border-radius: 10px; background: var(--surface); }
+  table { border-collapse: collapse; width: 100%; min-width: 36rem; font-size: 0.95rem; }
+  th, td { text-align: left; vertical-align: top; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--rule); }
+  th { background: var(--accent-soft); font-weight: 600; }
+  tr:last-child td { border-bottom: none; }
 
-The app works with the following information. **It stays on your device** unless you choose to share or export it.
+  .contact {
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 1.25rem 1.5rem;
+  }
+  .contact p { margin: 0.25rem 0; }
 
-| Information | Why it is used | Where it is kept |
-|---|---|---|
-| PDFs, images, Word/text/HTML files you open | To read, edit, convert, compress, sign, merge, split, redact, watermark or export them | Temporary copies in the app's private cache, deleted automatically |
-| Scanned pages and camera photos | To create PDFs and ID card copies | App's private cache |
-| Signatures you create | So you can reuse them in Fill & Sign | App's private storage |
-| Recent files list (file names, location, last page read) | To reopen documents and continue where you left off | App's private storage. Files opened from other apps (for example, a messaging app) are kept as a private copy so they can be reopened. |
-| Edit PDF working document and version history | To let you use several tools in a row and undo steps | App's private storage until you close the document |
-| Vault documents | To keep sensitive PDFs private | App's private storage, **encrypted (AES-256)** with a key held in the Android Keystore. Opening the Vault requires your fingerprint, face or screen lock. |
-| Auto-fill profile (for example name, parents' names, date of birth, address, phone, email, PAN, Aadhaar number, custom fields) | To fill PDF forms for you | App's private storage, **encrypted (AES-256)** with an Android Keystore key |
-| App settings (for example, night mode) and ad frequency counters | To remember your preferences and limit how often ads appear | App's private storage |
+  footer { grid-column: 1 / -1; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--rule); padding-top: 1.25rem; }
 
-**ID card copies and Aadhaar masking:** text recognition used to find and mask the Aadhaar number runs entirely on your device. The masked digits are removed from the image in the resulting PDF.
+  @media print {
+    nav.toc { display: none; }
+    .page { display: block; }
+    .promise, .table-wrap, .contact { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
 
-**Text recognition (OCR), text editing, redaction and document conversion** are all performed on your device.
+  <header class="title">
+    <div class="app">
+      <svg width="36" height="36" viewBox="0 0 108 108" aria-hidden="true">
+        <rect width="108" height="108" rx="24" fill="#4F5BD5"/>
+        <path fill="#FFFFFF" d="M36,26L62,26L74,38L74,82L36,82Z"/>
+        <path fill="#C9CCF2" d="M62,26L62,38L74,38Z"/>
+        <path fill="#4F5BD5" d="M43,50h24v4h-24z M43,60h24v4h-24z M43,70h15v4h-15z"/>
+      </svg>
+      <span>PDF Toolbox by RabbitFoot</span>
+    </div>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective 14 October 2026. Applies to the Android app PDF Toolbox (package <code>pdf.tools.ai.rabbitfoot</code>).</p>
+  </header>
 
-We (the developer) **cannot access** any of this information.
+  <div class="promise" role="note">
+    <p class="lead">Your documents are processed on your phone and are never uploaded to us.</p>
+    <ul>
+      <li>No account is needed. We don't collect your name, email or phone number.</li>
+      <li>The Vault and your auto-fill details are encrypted on your device.</li>
+      <li>The app shows ads from Google AdMob, which uses limited device information (see <a href="#ads">section 5</a>).</li>
+      <li>The scanner and text recognition run on your device using Google Play services (see <a href="#google">section 4</a>).</li>
+    </ul>
+  </div>
 
----
+  <nav class="toc" aria-label="Contents">
+    <details open>
+      <summary>Contents</summary>
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#device">1. Information on your device</a></li>
+        <li><a href="#permissions">2. Permissions</a></li>
+        <li><a href="#processing">3. How your files are processed</a></li>
+        <li><a href="#google">4. Google Play services</a></li>
+        <li><a href="#ads">5. Advertising</a></li>
+        <li><a href="#sharing">6. Sharing</a></li>
+        <li><a href="#retention">7. Keeping and deleting data</a></li>
+        <li><a href="#security">8. Security</a></li>
+        <li><a href="#children">9. Children</a></li>
+        <li><a href="#rights">10. Your rights</a></li>
+        <li><a href="#changes">11. Changes</a></li>
+        <li><a href="#contact">12. Contact</a></li>
+      </ol>
+    </details>
+  </nav>
 
-## 3. Permissions
+  <main>
+    <section id="device">
+      <h2><span class="n">1</span>Information on your device</h2>
+      <p>The app works with the following information. It stays on your device unless you choose to share or export it. We (the developer) cannot access any of it.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Information</th><th>Why it's used</th><th>Where it's kept</th></tr></thead>
+          <tbody>
+            <tr><td>PDFs, images, Word, text and HTML files you open</td><td>To read, edit, convert, compress, sign, merge, split, redact, watermark or export them</td><td>Temporary copies in the app's private storage, deleted automatically</td></tr>
+            <tr><td>Scanned pages and photos</td><td>To create PDFs and ID card copies</td><td>App's private storage</td></tr>
+            <tr><td>Signatures you create</td><td>To reuse them in Fill &amp; Sign</td><td>App's private storage</td></tr>
+            <tr><td>Recent files (file name, location, last page read)</td><td>To reopen documents where you left off</td><td>App's private storage. Files opened from other apps, such as a messaging app, are kept as a private copy so they can be reopened.</td></tr>
+            <tr><td>Edit PDF document and its version history</td><td>To use several tools in a row and undo steps</td><td>App's private storage until you close the document</td></tr>
+            <tr><td>Vault documents</td><td>To keep sensitive PDFs private</td><td>Encrypted with AES-256 using a key held in the Android Keystore. Opening the Vault needs your fingerprint, face or screen lock.</td></tr>
+            <tr><td>Auto-fill profile (for example name, parents' names, date of birth, address, phone, email, PAN, Aadhaar number, your own fields)</td><td>To fill PDF forms for you</td><td>Encrypted with AES-256 using a key held in the Android Keystore</td></tr>
+            <tr><td>Settings (for example night mode) and ad frequency counters</td><td>To remember your choices and limit how often ads appear</td><td>App's private storage</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-| Permission | Purpose |
-|---|---|
-| Internet and network state | To load ads, show the consent form, and let Google Play services download scanner and text-recognition components. **Not used to upload your files.** |
-| Advertising ID (`AD_ID`) | Used by Google AdMob for advertising (section 5) |
-| Biometric | To unlock the Vault with your fingerprint, face or screen lock. Your biometric data never leaves the Android system and is never accessible to the app. |
+    <section id="permissions">
+      <h2><span class="n">2</span>Permissions</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Permission</th><th>Purpose</th></tr></thead>
+          <tbody>
+            <tr><td>Internet and network state</td><td>To load ads, show the consent form, and let Google Play services download scanner and text recognition components. Never used to upload your files.</td></tr>
+            <tr><td>Advertising ID</td><td>Used by Google AdMob for advertising (<a href="#ads">section 5</a>)</td></tr>
+            <tr><td>Biometric</td><td>To unlock the Vault with your fingerprint, face or screen lock. Biometric data stays in Android's secure system; the app never sees it.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The app does not request access to your storage, contacts, location, microphone or camera:</p>
+      <ul>
+        <li>You choose files and photos with Android's file and photo pickers, which only give the app the items you select.</li>
+        <li>Scanning uses Google's document scanner or your camera app.</li>
+        <li>Saved files go to your Downloads or Pictures folder through Android's standard storage system.</li>
+      </ul>
+    </section>
 
-The app does **not** request storage, contacts, location, microphone or camera permissions:
-- Files and photos are selected through Android's file and photo pickers, which give the app access only to the items you choose.
-- Scanning uses Google's document scanner or your camera app.
-- Saved files are written to your Downloads or Pictures folder using Android's standard storage system.
+    <section id="processing">
+      <h2><span class="n">3</span>How your files are processed</h2>
+      <p>Everything the app does to your documents happens on your device, including text recognition (OCR), text editing, redaction, conversion and compression.</p>
+      <p>When you make an ID card copy, the Aadhaar number is found and masked on your device. The hidden digits are removed from the image in the resulting PDF, not just covered.</p>
+    </section>
 
----
+    <section id="google">
+      <h2><span class="n">4</span>Google Play services</h2>
+      <p>The document scanner and text recognition are provided by Google ML Kit through Google Play services.</p>
+      <ul>
+        <li>Images are processed on your device and are not sent to Google for processing.</li>
+        <li>Google Play services may download the required models over the internet.</li>
+        <li>Google may collect limited technical information, such as device and app details and performance metrics, to run and improve these services.</li>
+      </ul>
+      <p>Read more in <a href="https://developers.google.com/ml-kit/terms">Google's ML Kit terms</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+    </section>
 
-## 4. Google Play services (document scanner and text recognition)
+    <section id="ads">
+      <h2><span class="n">5</span>Advertising</h2>
+      <p>PDF Toolbox is free and supported by ads from Google AdMob. To show ads, measure them and prevent fraud, AdMob may collect and use:</p>
+      <ul>
+        <li>your device's advertising ID</li>
+        <li>device and app information, such as model, Android version and language</li>
+        <li>your IP address, which may be used to estimate your general location</li>
+        <li>how you interact with ads, such as views and taps</li>
+      </ul>
+      <h3>Consent</h3>
+      <p>Where the law requires it (for example in the European Economic Area, the UK and Switzerland), the app shows Google's consent form before loading ads. You can change your choice any time from the home screen menu under Privacy options, when that option is shown.</p>
+      <h3>Your controls</h3>
+      <ul>
+        <li>You can reset or delete your advertising ID in your phone's settings, usually under Settings &gt; Privacy &gt; Ads. Deleting it turns off personalised ads.</li>
+        <li>Rewarded video ads are always optional.</li>
+      </ul>
+      <p>Your documents are never used for advertising and are never shared with ad providers. Learn how Google uses information from apps that use its services: <a href="https://policies.google.com/technologies/partner-sites">Google partner sites policy</a>.</p>
+    </section>
 
-The document scanner and text recognition are provided by **Google ML Kit** through Google Play services:
+    <section id="sharing">
+      <h2><span class="n">6</span>Sharing</h2>
+      <p>We don't sell, rent or share your information.</p>
+      <p>Your files leave the app only when you choose to share, save, open them in another app or print them. They then go to the app or place you pick, and that app's privacy policy applies.</p>
+      <p>Google processes information as described in <a href="#google">section 4</a> and <a href="#ads">section 5</a>.</p>
+    </section>
 
-- Images are processed **on your device**. They are not sent to Google for processing.
-- Google Play services may download the required models over the internet.
-- Google may collect limited technical information, such as device and app information and performance metrics, to operate and improve these services.
+    <section id="retention">
+      <h2><span class="n">7</span>Keeping and deleting data</h2>
+      <ul>
+        <li><strong>Temporary files</strong> are deleted automatically, usually within a day. Decrypted Vault copies are deleted when the app restarts.</li>
+        <li><strong>Recent files:</strong> long-press an item to remove it, or tap Clear on the home screen.</li>
+        <li><strong>Vault:</strong> delete files from inside the Vault.</li>
+        <li><strong>Auto-fill profile:</strong> tap Clear all details on the profile screen.</li>
+        <li><strong>Edit PDF:</strong> tap Close document.</li>
+        <li><strong>Everything:</strong> uninstall the app, or go to Settings &gt; Apps &gt; PDF Toolbox &gt; Storage &gt; Clear storage.</li>
+      </ul>
+      <p>Files you saved to your Downloads or Pictures folder stay there until you delete them.</p>
+    </section>
 
-See [Google's ML Kit terms](https://developers.google.com/ml-kit/terms) and the [Google Privacy Policy](https://policies.google.com/privacy).
+    <section id="security">
+      <h2><span class="n">8</span>Security</h2>
+      <ul>
+        <li>All app data is kept in Android's private app storage, which other apps can't access.</li>
+        <li>Vault files, the list of Vault files, and the auto-fill profile are also encrypted with AES-256 using a key stored in the Android Keystore.</li>
+        <li>The Vault locks automatically when the app goes to the background.</li>
+      </ul>
+      <p>No storage method is completely secure, but the app is designed to keep your data on your device and protected.</p>
+    </section>
 
----
+    <section id="children">
+      <h2><span class="n">9</span>Children</h2>
+      <p>The app isn't directed to children under 13, or the minimum age set by law in your country. We don't knowingly collect personal information from children, and ads in the app aren't intended to target children.</p>
+    </section>
 
-## 5. Advertising (Google AdMob)
+    <section id="rights">
+      <h2><span class="n">10</span>Your rights</h2>
+      <p>Your documents and details are stored only on your device, so you can view, export or delete them at any time using the options in <a href="#retention">section 7</a>.</p>
+      <p>Depending on where you live, for example under the EU or UK GDPR or India's Digital Personal Data Protection Act, 2023, you may have rights to access, correct or delete personal data, or to object to its processing. For ad data processed by Google, use the controls in <a href="#ads">section 5</a>. For anything else, contact us.</p>
+    </section>
 
-The app is free and supported by ads from **Google AdMob**. To show ads, measure them and prevent fraud, AdMob may collect and use:
+    <section id="changes">
+      <h2><span class="n">11</span>Changes</h2>
+      <p>We may update this policy, for example when we add features. The new version will be posted at this link with a new effective date. Significant changes will be highlighted in the app or on its Google Play listing.</p>
+    </section>
 
-- Your device's advertising ID
-- Device and app information (for example model, operating system version, language)
-- IP address, which may be used to estimate your general location
-- Interactions with ads (for example views and clicks)
+    <section id="contact">
+      <h2><span class="n">12</span>Contact</h2>
+      <div class="contact">
+        <p><strong>RabbitFoot</strong></p>
+        <p>Email: <a href="mailto:likhil004play@gmail.com">likhil004play@gmail.com</a></p>
+        <p>Google Play: <a href="https://play.google.com/store/apps/developer?id=RabbitFoot">More apps from RabbitFoot</a></p>
+      </div>
+    </section>
+  </main>
 
-**Consent:** where required by law (for example in the European Economic Area, the UK and Switzerland), the app shows Google's consent form before ads are loaded. You can change your choice at any time from **Menu → Privacy options** on the home screen, when that option is shown.
-
-**Your controls:**
-- You can reset or delete your advertising ID in your device settings: **Settings → Privacy → Ads** (the exact path varies by device). Deleting it opts you out of personalised ads.
-- Rewarded ads are always optional.
-
-Learn more about how Google uses information: [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites) and [Google Privacy Policy](https://policies.google.com/privacy).
-
-**Your documents are never used for advertising** and are never shared with ad providers.
-
----
-
-## 6. Sharing of information
-
-We do not sell, rent or share your information.
-
-Your files leave the app **only when you choose to**, for example when you tap **Share**, **Save**, **Save as**, **Open with another app** or **Print**. In those cases, the file goes to the app or location you select, and that app's own privacy policy applies.
-
-Information may be processed by Google as described in sections 4 and 5.
-
----
-
-## 7. Data retention and deletion
-
-- **Temporary files** (working copies, exports waiting to be shared) are stored in the app's cache and deleted automatically, usually within a day. Decrypted Vault copies are deleted when the app restarts.
-- **Recent files:** remove an item by long-pressing it, or tap **Clear** on the home screen.
-- **Vault:** delete files from inside the Vault.
-- **Auto-fill profile:** tap **Clear all details** in the profile screen.
-- **Edit PDF document:** use **Close document** in Edit PDF.
-- **Everything:** uninstalling the app, or clearing its storage in **Settings → Apps → PDF ToolBox→ Storage → Clear storage**, permanently deletes all data held by the app.
-
-Files you saved to your Downloads or Pictures folders remain there until you delete them.
-
----
-
-## 8. Security
-
-- All app data is kept in Android's private, sandboxed app storage, which other apps cannot access.
-- Vault files, the Vault file list, and the Auto-fill profile are additionally encrypted with AES-256 using a key stored in the Android Keystore.
-- The Vault locks automatically when the app goes to the background.
-
-No method of storage is 100% secure, but we design the app to keep your data on your device and protected.
-
----
-
-## 9. Children's privacy
-
-The app is not directed to children under 13 (or the minimum age required by the law in your country). We do not knowingly collect personal information from children. Ads in the app are not intended to target children.
-
----
-
-## 10. Your rights
-
-Because your documents and details are stored only on your device, you are in full control of them and can view, export or delete them at any time using the options in section 7.
-
-Depending on where you live (for example under the EU/UK GDPR or India's Digital Personal Data Protection Act, 2023), you may have rights to access, correct, delete or object to the processing of personal data. For data processed by Google for ads, you can use Google's controls described in section 5. For any other question, contact us using the details below.
-
----
-
-## 11. Changes to this policy
-
-We may update this Privacy Policy from time to time, for example when we add features. The updated version will be published at the same link with a new effective date. Significant changes will be highlighted in the app or on its Google Play listing.
-
----
-
-## 12. Contact
-
-If you have questions about this Privacy Policy or the app:
-
-**RabbitFoot**
-Email: likhil004play@gmail.com
-Google Play: [More apps from RabbitFoot](https://play.google.com/store/apps/developer?id=RabbitFoot)
+  <footer>
+    © 2026 RabbitFoot. PDF Toolbox Privacy Policy.
+  </footer>
+</div>
+</body>
+</html>
