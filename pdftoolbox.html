@@ -1,0 +1,64 @@
+# Privacy Policy for PDF Tools Box
+
+**Effective Date:** October 14, 2026  
+**Last Updated:** October 14, 2026
+
+At **PDF Tools Box** ("we," "our," or "us"), we prioritize your privacy. This Privacy Policy explains how our Android application handles your information, how third-party ad services function within the app, and what permissions are utilized to provide our features.
+
+---
+
+## 1. Local & On-Device Data Processing
+**PDF Tools Box** is designed as a privacy-first, offline utility tool. 
+
+* **Document Processing:** All PDF operations (including editing, compression, OCR/searchable PDF creation, merging, splitting, redacting, and conversions) are performed **100% locally on your device**. Your files and documents are **never uploaded** to external servers, cloud storage, or third-party databases.
+* **Biometric Vault:** Files placed inside the Vault remain encrypted on your local storage. Biometric authentication (fingerprint/face unlock) relies strictly on your Android device’s native Android BiometricPrompt API. We do not store, access, or transmit your biometric data.
+* **Auto-Fill Profile:** Information saved in the Auto-Fill Profile (such as names, dates, or contact details used to populate PDF forms) is stored strictly in your device's private local storage and is never collected or shared.
+
+---
+
+## 2. Advertising & Third-Party Services (Google AdMob)
+To keep core features free, **PDF Tools Box** uses **Google AdMob** to display advertisements. 
+
+While PDF Tools Box itself does not collect personal data or track you, Google AdMob may automatically collect and process certain non-personal device information to serve ads.
+
+### Information Collected by Google AdMob:
+* **Device Identifiers:** Advertising ID (GAID), Android ID, device brand, model, and OS version.
+* **Network & Diagnostic Data:** IP address, mobile network information, crash logs, and app performance metrics.
+* **Ad Interaction Data:** Views, clicks, and engagement with displayed banner or interstitial ads.
+
+Google AdMob uses this information in accordance with [Google's Privacy Policy](https://policies.google.com/privacy) and [AdMob Policies](https://support.google.com/admob/answer/6128543).
+
+---
+
+## 3. App Permissions
+To function properly, **PDF Tools Box** may request the following permissions on your device:
+
+* **Storage / All Files Access (`READ_EXTERNAL_STORAGE`, `WRITE_EXTERNAL_STORAGE`, `MANAGE_EXTERNAL_STORAGE`):** Required to open, edit, compress, and save PDF files on your device.
+* **Camera (`CAMERA`):** Required strictly for scanning physical documents, ID cards, and converting photos into PDFs.
+* **Biometric / Fingerprint (`USE_BIOMETRIC`, `USE_FINGERPRINT`):** Required to secure and unlock your local encrypted Vault.
+* **Internet & Network State (`INTERNET`, `ACCESS_NETWORK_STATE`):** Required solely to load and render Google AdMob advertisements.
+
+*Note: You can revoke these permissions at any time through your Android System Settings, though certain features (e.g., scanning or unlocking the vault) may cease to function.*
+
+---
+
+## 4. Analytics & Tracking
+We do not run custom tracking, telemetry, or user behavior analytics inside **PDF Tools Box**. We do not build user profiles, sell personal data, or rent user information to any third parties.
+
+---
+
+## 5. Children's Privacy
+**PDF Tools Box** is a general audience document management tool. We do not knowingly collect personal identifiable information from children under the age of 13. If you believe an ad network has inadvertently collected data from a child, please contact us immediately.
+
+---
+
+## 6. Changes to This Privacy Policy
+We may update our Privacy Policy from time to time to reflect changes in app functionality or legal requirements. Any changes will be updated on this page with a revised "Last Updated" date.
+
+---
+
+## 7. Contact Us
+If you have any questions or suggestions about our Privacy Policy or data handling practices, please contact us at:
+
+* **App Name:** PDF Tools Box  
+* **Support Email:** [Insert Your Developer/Support Email Here]  
