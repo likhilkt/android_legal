@@ -1,63 +1,152 @@
-# Privacy Policy for PDF Tools Box
+# Privacy Policy — PDF Tools Pro
 
-**Effective Date:** October 14, 2026  
-**Last Updated:** October 14, 2026
+**Effective date:** 14 October 2026
+**Developer:** RabbitFoot
+**App:** PDF Tools Pro (package `pdf.tools.ai.rabbitfoot`)
+**Contact:** [your-email@example.com](mailto:your-email@example.com)
 
-At **PDF Tools Box** ("we," "our," or "us"), we prioritize your privacy. This Privacy Policy explains how our Android application handles your information, how third-party ad services function within the app, and what permissions are utilized to provide our features.
-
----
-
-## 1. Local & On-Device Data Processing
-**PDF Tools Box** is designed as a privacy-first, offline utility tool. 
-
-* **Document Processing:** All PDF operations (including editing, compression, OCR/searchable PDF creation, merging, splitting, redacting, and conversions) are performed **100% locally on your device**. Your files and documents are **never uploaded** to external servers, cloud storage, or third-party databases.
-* **Biometric Vault:** Files placed inside the Vault remain encrypted on your local storage. Biometric authentication (fingerprint/face unlock) relies strictly on your Android device’s native Android BiometricPrompt API. We do not store, access, or transmit your biometric data.
-* **Auto-Fill Profile:** Information saved in the Auto-Fill Profile (such as names, dates, or contact details used to populate PDF forms) is stored strictly in your device's private local storage and is never collected or shared.
+This Privacy Policy explains how PDF Tools Pro ("the app", "we", "us") handles information when you use it. We built the app so that **your documents stay on your device**.
 
 ---
 
-## 2. Advertising & Third-Party Services (Google AdMob)
-To keep core features free, **PDF Tools Box** uses **Google AdMob** to display advertisements. 
+## 1. Summary
 
-While PDF Tools Box itself does not collect personal data or track you, Google AdMob may automatically collect and process certain non-personal device information to serve ads.
-
-### Information Collected by Google AdMob:
-* **Device Identifiers:** Advertising ID (GAID), Android ID, device brand, model, and OS version.
-* **Network & Diagnostic Data:** IP address, mobile network information, crash logs, and app performance metrics.
-* **Ad Interaction Data:** Views, clicks, and engagement with displayed banner or interstitial ads.
-
-Google AdMob uses this information in accordance with [Google's Privacy Policy](https://policies.google.com/privacy) and [AdMob Policies](https://support.google.com/admob/answer/6128543).
+- **Your files are processed on your device.** PDFs, images, scans, signatures and form data are never uploaded to our servers. We do not operate any servers that receive your files.
+- **We do not require an account** and we do not collect your name, email or phone number.
+- **The app shows ads** through Google AdMob. Ads use limited device information, as described in section 5.
+- **Some features use Google Play services** (document scanner and text recognition). These run on your device, but Google may download models and collect limited technical data, as described in section 4.
+- **Sensitive data you choose to store** (Vault files and your Auto-fill profile) is encrypted on your device.
 
 ---
 
-## 3. App Permissions
-To function properly, **PDF Tools Box** may request the following permissions on your device:
+## 2. Information processed on your device
 
-* **Camera (`CAMERA`):** Required strictly for scanning physical documents, ID cards, and converting photos into PDFs.
-* **Biometric / Fingerprint (`USE_BIOMETRIC`, `USE_FINGERPRINT`):** Required to secure and unlock your local encrypted Vault.
-* **Internet & Network State (`INTERNET`, `ACCESS_NETWORK_STATE`):** Required solely to load and render Google AdMob advertisements.
+The app works with the following information. **It stays on your device** unless you choose to share or export it.
 
-*Note: You can revoke these permissions at any time through your Android System Settings, though certain features (e.g., scanning or unlocking the vault) may cease to function.*
+| Information | Why it is used | Where it is kept |
+|---|---|---|
+| PDFs, images, Word/text/HTML files you open | To read, edit, convert, compress, sign, merge, split, redact, watermark or export them | Temporary copies in the app's private cache, deleted automatically |
+| Scanned pages and camera photos | To create PDFs and ID card copies | App's private cache |
+| Signatures you create | So you can reuse them in Fill & Sign | App's private storage |
+| Recent files list (file names, location, last page read) | To reopen documents and continue where you left off | App's private storage. Files opened from other apps (for example, a messaging app) are kept as a private copy so they can be reopened. |
+| Edit PDF working document and version history | To let you use several tools in a row and undo steps | App's private storage until you close the document |
+| Vault documents | To keep sensitive PDFs private | App's private storage, **encrypted (AES-256)** with a key held in the Android Keystore. Opening the Vault requires your fingerprint, face or screen lock. |
+| Auto-fill profile (for example name, parents' names, date of birth, address, phone, email, PAN, Aadhaar number, custom fields) | To fill PDF forms for you | App's private storage, **encrypted (AES-256)** with an Android Keystore key |
+| App settings (for example, night mode) and ad frequency counters | To remember your preferences and limit how often ads appear | App's private storage |
 
----
+**ID card copies and Aadhaar masking:** text recognition used to find and mask the Aadhaar number runs entirely on your device. The masked digits are removed from the image in the resulting PDF.
 
-## 4. Analytics & Tracking
-We do not run custom tracking, telemetry, or user behavior analytics inside **PDF Tools Box**. We do not build user profiles, sell personal data, or rent user information to any third parties.
+**Text recognition (OCR), text editing, redaction and document conversion** are all performed on your device.
 
----
-
-## 5. Children's Privacy
-**PDF Tools Box** is a general audience document management tool. We do not knowingly collect personal identifiable information from children under the age of 13. If you believe an ad network has inadvertently collected data from a child, please contact us immediately.
-
----
-
-## 6. Changes to This Privacy Policy
-We may update our Privacy Policy from time to time to reflect changes in app functionality or legal requirements. Any changes will be updated on this page with a revised "Last Updated" date.
+We (the developer) **cannot access** any of this information.
 
 ---
 
-## 7. Contact Us
-If you have any questions or suggestions about our Privacy Policy or data handling practices, please contact us at:
+## 3. Permissions
 
-* **App Name:** PDF Tools Box  
-* **Support Email:** [Insert Your Developer/Support Email Here]  
+| Permission | Purpose |
+|---|---|
+| Internet and network state | To load ads, show the consent form, and let Google Play services download scanner and text-recognition components. **Not used to upload your files.** |
+| Advertising ID (`AD_ID`) | Used by Google AdMob for advertising (section 5) |
+| Biometric | To unlock the Vault with your fingerprint, face or screen lock. Your biometric data never leaves the Android system and is never accessible to the app. |
+
+The app does **not** request storage, contacts, location, microphone or camera permissions:
+- Files and photos are selected through Android's file and photo pickers, which give the app access only to the items you choose.
+- Scanning uses Google's document scanner or your camera app.
+- Saved files are written to your Downloads or Pictures folder using Android's standard storage system.
+
+---
+
+## 4. Google Play services (document scanner and text recognition)
+
+The document scanner and text recognition are provided by **Google ML Kit** through Google Play services:
+
+- Images are processed **on your device**. They are not sent to Google for processing.
+- Google Play services may download the required models over the internet.
+- Google may collect limited technical information, such as device and app information and performance metrics, to operate and improve these services.
+
+See [Google's ML Kit terms](https://developers.google.com/ml-kit/terms) and the [Google Privacy Policy](https://policies.google.com/privacy).
+
+---
+
+## 5. Advertising (Google AdMob)
+
+The app is free and supported by ads from **Google AdMob**. To show ads, measure them and prevent fraud, AdMob may collect and use:
+
+- Your device's advertising ID
+- Device and app information (for example model, operating system version, language)
+- IP address, which may be used to estimate your general location
+- Interactions with ads (for example views and clicks)
+
+**Consent:** where required by law (for example in the European Economic Area, the UK and Switzerland), the app shows Google's consent form before ads are loaded. You can change your choice at any time from **Menu → Privacy options** on the home screen, when that option is shown.
+
+**Your controls:**
+- You can reset or delete your advertising ID in your device settings: **Settings → Privacy → Ads** (the exact path varies by device). Deleting it opts you out of personalised ads.
+- Rewarded ads are always optional.
+
+Learn more about how Google uses information: [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites) and [Google Privacy Policy](https://policies.google.com/privacy).
+
+**Your documents are never used for advertising** and are never shared with ad providers.
+
+---
+
+## 6. Sharing of information
+
+We do not sell, rent or share your information.
+
+Your files leave the app **only when you choose to**, for example when you tap **Share**, **Save**, **Save as**, **Open with another app** or **Print**. In those cases, the file goes to the app or location you select, and that app's own privacy policy applies.
+
+Information may be processed by Google as described in sections 4 and 5.
+
+---
+
+## 7. Data retention and deletion
+
+- **Temporary files** (working copies, exports waiting to be shared) are stored in the app's cache and deleted automatically, usually within a day. Decrypted Vault copies are deleted when the app restarts.
+- **Recent files:** remove an item by long-pressing it, or tap **Clear** on the home screen.
+- **Vault:** delete files from inside the Vault.
+- **Auto-fill profile:** tap **Clear all details** in the profile screen.
+- **Edit PDF document:** use **Close document** in Edit PDF.
+- **Everything:** uninstalling the app, or clearing its storage in **Settings → Apps → PDF Tools Pro → Storage → Clear storage**, permanently deletes all data held by the app.
+
+Files you saved to your Downloads or Pictures folders remain there until you delete them.
+
+---
+
+## 8. Security
+
+- All app data is kept in Android's private, sandboxed app storage, which other apps cannot access.
+- Vault files, the Vault file list, and the Auto-fill profile are additionally encrypted with AES-256 using a key stored in the Android Keystore.
+- The Vault locks automatically when the app goes to the background.
+
+No method of storage is 100% secure, but we design the app to keep your data on your device and protected.
+
+---
+
+## 9. Children's privacy
+
+The app is not directed to children under 13 (or the minimum age required by the law in your country). We do not knowingly collect personal information from children. Ads in the app are not intended to target children.
+
+---
+
+## 10. Your rights
+
+Because your documents and details are stored only on your device, you are in full control of them and can view, export or delete them at any time using the options in section 7.
+
+Depending on where you live (for example under the EU/UK GDPR or India's Digital Personal Data Protection Act, 2023), you may have rights to access, correct, delete or object to the processing of personal data. For data processed by Google for ads, you can use Google's controls described in section 5. For any other question, contact us using the details below.
+
+---
+
+## 11. Changes to this policy
+
+We may update this Privacy Policy from time to time, for example when we add features. The updated version will be published at the same link with a new effective date. Significant changes will be highlighted in the app or on its Google Play listing.
+
+---
+
+## 12. Contact
+
+If you have questions about this Privacy Policy or the app:
+
+**RabbitFoot**
+Email: [your-email@example.com](mailto:your-email@example.com)
+Google Play: [More apps from RabbitFoot](https://play.google.com/store/apps/developer?id=RabbitFoot)
